@@ -1,0 +1,33 @@
+{
+  "environments": {
+    "dev": {
+      "metadata": {
+        "website_title": "template-metalsmith"
+      },
+      "languages": [
+        "en, en, /, http://localhost:5501/"
+      ]
+    }
+  },
+  "assets": {
+    "src": "site/assets",
+    "dest": ["assets","en/assets"]
+  },
+  "source": "site/pages",
+  "destination": "output",
+  "data": {
+    "posts_path": "content/posts",
+    "pages_path": "site/pages"
+  },
+  "layouts": {
+    "directory": "site/theme"
+  },
+  
+  "log": false,
+  "debug": true
+
+
+  
+}
+
+

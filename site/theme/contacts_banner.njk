@@ -1,0 +1,12 @@
+<section class="banners">  
+  <section class="banners-inner">
+    {% for post in sections["contacts_banners"].posts | sort(post.taxonomy, attribute='order') %}
+        <section class="banners-description">
+          {{ post.contents| safe }}
+        </section>
+        <section class="banners-img">
+          <img src="{{url}}{{post.image}}" alt="{{post.alt}}">
+        </section>
+    {% endfor %}
+  </section>
+</section>

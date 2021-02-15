@@ -1,0 +1,14 @@
+{# <section class="{{ section.block }}"> #}
+<section class="features">
+
+	{% for post in sections["homepage_features"].posts | sort(post.taxonomy, attribute='order') %}
+		
+			<section class="features-description">
+				{{ post.contents | safe }}
+			</section>
+			<section class="features-img">
+			<img src="{{url}}{{post.image}}" alt="{{ post.alt }}">
+			</section>
+	
+	{% endfor %}
+</section>

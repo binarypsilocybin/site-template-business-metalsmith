@@ -1,0 +1,15 @@
+<section class="banner">
+    {% for post in sections["homepage_banners"].posts | sort(post.taxonomy, attribute='order') %}
+        <section class="banner-description">
+          {{ post.contents| safe }}
+          {% for button in post.button %}
+          <a href='{{url}}eticadata'><button type="button" class="btn-banner">
+          {{ button }}
+          </button></a>
+          {% endfor %}
+        </section>
+        <section class="banner-img">
+          <img src="{{url}}{{post.image}}" alt="{{post.alt}}">
+        </section>
+    {% endfor %}
+</section>

@@ -1,0 +1,10 @@
+{% extends 'base.njk' %}
+
+{% block body_def %}id="{{slug}}" class="regular"{% endblock %}
+
+{% block page %}
+    <div id="{{slug}}" class="regular-content">
+      {{ contents | safe }}
+    </div>
+  </body>
+{% endblock %}

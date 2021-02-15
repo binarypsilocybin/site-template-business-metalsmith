@@ -1,0 +1,10 @@
+{% extends 'base.njk' %}
+
+{% block body_def %}id="homepage"{% endblock %}
+
+{% block page %}
+      {% include "homepage_banner.njk" %}
+      {% include "homepage_clients.njk" %}
+      {% include "homepage_highlights.njk" %}
+      {% include "homepage_offers.njk" %}
+{% endblock %}

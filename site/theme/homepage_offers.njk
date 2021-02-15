@@ -1,0 +1,21 @@
+<section class="offers">
+
+		{% for post in sections["homepage_offers_title"].posts | sort(post.taxonomy, attribute='order') %}
+			<section class="offers-header">
+				{{ post.contents | safe }}
+			</section>
+		{% endfor %}
+
+		{% for post in sections["homepage_offers"].posts | sort(post.taxonomy, attribute='order') %}
+			<div class="offer">
+				<section class="offers-description">
+					<h3 class="offers-title">{{ post.title | safe }}</h3>
+					{{ post.contents | safe }}
+				</section>
+				<section class="offers-img">
+				<img src="{{url}}{{post.image}}" alt="{{ post.alt }}">
+				</section>
+			</div>
+		{% endfor %}
+
+</section>
